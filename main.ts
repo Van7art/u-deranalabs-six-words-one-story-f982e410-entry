@@ -4,7 +4,12 @@
 
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const STORY = "Sold the house. Kept the ghost.";
+const FIRST_SENTENCE = "Sold the house.";
+const SECOND_SENTENCE = "Kept the ghost.";
+
+// The turn: the sale was supposed to leave the past behind, but the
+// narrator stayed haunted — the ghost was the one thing not sold.
+const STORY = FIRST_SENTENCE + " " + SECOND_SENTENCE;
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", STORY + "\n", "utf8");
